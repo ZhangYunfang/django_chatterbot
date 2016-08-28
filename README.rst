@@ -13,25 +13,31 @@ app using Django_, `Django REST framework`_ and ChatterBot_.
 Installation
 ------------
 
-   pip install django-chatterbot
+   pip install django chatterbot
 
 Quick start
 -----------
 
-1. Add "django_chatterbot" to your INSTALLED_APPS setting like this::
+1. Add ChatterBot's Django app module to your INSTALLED_APPS setting like this:
 
    INSTALLED_APPS = (
        ...
-       'django_chatterbot',
+       'chatterbot.ext.django_chatterbot',
    )
 
-2. Include the django_chatterbot URLconf in your project urls.py like this::
+2. Include the URLconf in your project urls.py like this:
+   from chatterbot.ext.django_chatterbot import urls as chatterbot_urls
 
-   url(r'^chatterbot/', include('django_chatterbot.urls')),
+   urlpatterns = [
+       ...
+       url(r'^api/chatterbot/', include(chatterbot_urls, namespace='chatterbot')),
+   ]
 
 3. Run `python manage.py migrate` to create the chatterbot models.
 
-4. POST to http://127.0.0.1:8000/chatterbot/ to start a conversation.
+4. Start your Django app `python manage.py runserver 0.0.0.0:8000`
+
+5. POST to http://127.0.0.1:8000/api/chatterbot/ to start a conversation.
 
    {'text': 'Hello, how are you?'}
 
