@@ -1,14 +1,9 @@
-.. image:: https://travis-ci.org/gunthercox/django_chatterbot.svg?branch=master
-    :target: https://travis-ci.org/gunthercox/django_chatterbot
-.. image:: https://img.shields.io/pypi/v/chatterbot.svg
-    :target: https://pypi.python.org/pypi/django-chatterbot/
-
 =================
 Django ChatterBot
 =================
 
 This is a Django project that makes it possible to create a simple chat bot web
-app using Django_, `Django REST framework`_ and ChatterBot_.
+app using Django_ and ChatterBot_.
 
 Installation
 ------------
@@ -42,5 +37,4 @@ Quick start
    {'text': 'Hello, how are you?'}
 
 .. _Django: https://www.djangoproject.com
-.. _Django REST framework: http://www.django-rest-framework.org
 .. _ChatterBot: https://github.com/gunthercox/ChatterBot
