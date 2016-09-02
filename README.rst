@@ -13,28 +13,9 @@ Installation
 Quick start
 -----------
 
-1. Add ChatterBot's Django app module to your INSTALLED_APPS setting like this:
-
-   INSTALLED_APPS = (
-       ...
-       'chatterbot.ext.django_chatterbot',
-   )
-
-2. Include the URLconf in your project urls.py like this:
-   from chatterbot.ext.django_chatterbot import urls as chatterbot_urls
-
-   urlpatterns = [
-       ...
-       url(r'^api/chatterbot/', include(chatterbot_urls, namespace='chatterbot')),
-   ]
-
-3. Run `python manage.py migrate` to create the chatterbot models.
-
-4. Start your Django app `python manage.py runserver 0.0.0.0:8000`
-
-5. POST to http://127.0.0.1:8000/api/chatterbot/ to start a conversation.
-
-   {'text': 'Hello, how are you?'}
+1. Run `python manage.py migrate` to create the chatterbot models.
+2. Start your Django app `python manage.py runserver 0.0.0.0:8000`.
+3. Visit http://127.0.0.1:8000/ to start a conversation.
 
 .. _Django: https://www.djangoproject.com
 .. _ChatterBot: https://github.com/gunthercox/ChatterBot
